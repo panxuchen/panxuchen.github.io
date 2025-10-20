@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>潘旭晨 — 个人主页</title>
+  <meta name="description" content="潘旭晨（潘旭晨）的个人简历与作品展示" />
+
+  <style>
+    :root{--bg:#0f1724;--card:#0b1220;--accent:#06b6d4;--muted:#9aa6b2;--glass: rgba(255,255,255,0.03)}
+    *{box-sizing:border-box}
+    body{font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial; margin:0; background:linear-gradient(180deg,#071028 0%, #081827 100%); color:#e6eef3; -webkit-font-smoothing:antialiased}
+    .container{max-width:1000px;margin:32px auto;padding:24px}
+
+    header{display:flex;gap:20px;align-items:center}
+    .avatar{width:110px;height:110px;border-radius:14px;background:linear-gradient(135deg,var(--accent),#4f46e5);display:flex;align-items:center;justify-content:center;font-weight:700;font-size:32px;color:#021226;flex-shrink:0}
+    h1{margin:0;font-size:28px}
+    .subtitle{color:var(--muted);margin-top:6px}
+
+    .card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01)); border-radius:12px;padding:18px;margin-top:20px;box-shadow:0 6px 18px rgba(2,6,23,0.6)}
+
+    .grid{display:grid;grid-template-columns:1fr 320px;gap:20px}
+
+    .contact{display:flex;flex-direction:column;gap:8px}
+    .contact a{color:var(--accent);text-decoration:none}
+    .label{font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:0.06em}
+    .list{margin:0;padding:0;list-style:none}
+    .list li{margin:10px 0}
+
+    section h2{margin:0 0 8px 0;font-size:16px}
+    .edu-item,.exp-item{margin-bottom:12px}
+    .meta{color:var(--muted);font-size:13px}
+    .skills{display:flex;flex-wrap:wrap;gap:8px}
+    .tag{background:var(--glass);padding:6px 10px;border-radius:999px;font-size:13px;color:var(--muted)}
+
+    footer{margin-top:28px;color:var(--muted);font-size:13px;text-align:center}
+
+    @media (max-width:880px){.grid{grid-template-columns:1fr;}.avatar{width:88px;height:88px;font-size:26px}}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="avatar">潘旭晨</div>
+      <div>
+        <h1>潘旭晨</h1>
+        <div class="subtitle">新媒体传播学（硕士） • 影视/视频制作 • 视觉与传播</div>
+        <div style="margin-top:8px;color:var(--muted);font-size:13px">出生：2000.04</div>
+      </div>
+    </header>
+
+    <div class="grid">
+      <main>
+        <div class="card">
+          <section id="about">
+            <h2>关于我</h2>
+            <p style="color:var(--muted);line-height:1.6">具备影视与新媒体方向的综合技能，擅长短片拍摄、脚本撰写、后期剪辑与企业文化宣传。办公软件与常见音视频处理软件（PS、PR、AE、AU、剪映）熟练使用，具备较强的沟通和组织能力。</p>
+          </section>
+
+          <section id="education" style="margin-top:14px">
+            <h2>教育背景</h2>
+            <div class="edu-item">
+              <div style="font-weight:600">香港浸会大学 — 新媒体传播学（硕士）</div>
+              <div class="meta">2022.09 — 2023.09</div>
+              <div class="meta">主修课程：独立电影制片、互动媒体、媒体艺术、影视与新媒体宣传广告与发行、传播学基础</div>
+            </div>
+            <div class="edu-item">
+              <div style="font-weight:600">南京传媒学院 — 戏剧影视设计（本科）</div>
+              <div class="meta">2018.09 — 2022.06 • GPA: 3.72 • 专业排名：2</div>
+              <div class="meta">主修课程：计算机绘图语言、摄影艺术、影视鉴赏、视听语言、设计基础等</div>
+            </div>
+          </section>
+
+          <section id="experience" style="margin-top:14px">
+            <h2>实习 / 工作经历</h2>
+            <div class="exp-item">
+              <div style="font-weight:600">中联重科 — 文化专干</div>
+              <div class="meta">2023.12 — 至今</div>
+              <ul class="list" style="color:var(--muted)">
+                <li>负责企业文化宣传，包括宣传采访短片制作、企业新闻稿件撰写、企业工会活动组织策划与执行。</li>
+                <li>提升文字功底与沟通能力，参与活动策划与视频制作完整流程。</li>
+              </ul>
+            </div>
+
+            <div class="exp-item">
+              <div style="font-weight:600">河南广播电视台 — 栏目制作实习生</div>
+              <div class="meta">2021.11 — 2022.02</div>
+              <ul class="list" style="color:var(--muted)">
+                <li>负责节目拍摄前方案制作、前期脚本文案撰写、节日海报设计、后期素材整理与剪辑包装。</li>
+              </ul>
+            </div>
+
+            <div class="exp-item">
+              <div style="font-weight:600">学生会宣传制作中心 — 干事/部长</div>
+              <div class="meta">2018 — 2020</div>
+              <ul class="list" style="color:var(--muted)">
+                <li>组织活动宣传、带领团队完成海报、横幅、展贴等物料设计制作，参与“暖冬计划”“迎新晚会”等校园活动策划与执行。</li>
+              </ul>
+            </div>
+          </section>
+
+          <section id="honors" style="margin-top:14px">
+            <h2>奖项与荣誉</h2>
+            <ul class="list" style="color:var(--muted)">
+              <li>2019.09 奖学金、三好学生</li>
+              <li>2020.09 学生会优秀成员</li>
+              <li>2022.06 优秀毕业生</li>
+            </ul>
+          </section>
+
+          <section id="skills" style="margin-top:14px">
+            <h2>专业技能</h2>
+            <div class="skills">
+              <span class="tag">视频剪辑（PR）</span>
+              <span class="tag">后期合成（AE）</span>
+              <span class="tag">音频处理（AU）</span>
+              <span class="tag">平面设计（PS）</span>
+              <span class="tag">剪映</span>
+              <span class="tag">Office（Word/Excel/PPT）</span>
+              <span class="tag">普通话良好</span>
+              <span class="tag">英语（CET-4/6）</span>
+            </div>
+          </section>
+
+          <section id="summary" style="margin-top:14px">
+            <h2>自我评价</h2>
+            <p style="color:var(--muted);line-height:1.6">协作效率高，责任心强，性格开朗。善于沟通，具有良好的团队合作意识与执行力，能有条理地完成工作任务。</p>
+          </section>
+
+        </div>
+
+        <footer>
+          由简历生成 • 若要修改内容或样式，请编辑 <code>index.html</code> 并重新部署。
+        </footer>
+      </main>
+
+      <aside>
+        <div class="card">
+          <section id="contact">
+            <h2>联系方式</h2>
+            <div class="contact">
+              <div><span class="label">电话</span><div>19839727710</div></div>
+              <div><span class="label">邮箱</span><div><a href="mailto:panpanxuchen@163.com">panpanxuchen@163.com</a></div></div>
+              <div><span class="label">Github</span><div><a href="#">(在此填写你的 GitHub 用户名)</a></div></div>
+            </div>
+          </section>
+
+          <section style="margin-top:12px">
+            <h2>快速链接</h2>
+            <ul class="list">
+              <li><a href="#education">教育背景</a></li>
+              <li><a href="#experience">实习 / 工作经历</a></li>
+              <li><a href="#skills">专业技能</a></li>
+              <li><a href="#contact">联系方式</a></li>
+            </ul>
+          </section>
+
+          <section style="margin-top:12px">
+            <h2>如何下载简历</h2>
+            <p style="color:var(--muted);font-size:13px">把你的 PDF（例如 <code>简历.pdf</code>）放到仓库的根目录，然后将下面链接指向该文件：</p>
+            <pre style="background:rgba(255,255,255,0.02);padding:8px;border-radius:6px;font-size:13px">&lt;a href=\"./简历.pdf\" download&gt;下载简历 (PDF)&lt;/a&gt;</pre>
+          </section>
+        </div>
+      </aside>
+    </div>
+  </div>
+</body>
+</html>
