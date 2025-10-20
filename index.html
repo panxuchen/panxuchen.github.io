@@ -28,9 +28,14 @@
     .typewriter{display:inline-block;color:var(--accent);font-weight:600}
     .grid{display:grid;grid-template-columns:1fr 340px;gap:20px;margin-top:18px}
     .card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01)); border-radius:12px;padding:18px;margin-top:0;box-shadow:0 8px 30px rgba(2,6,23,0.6);backdrop-filter: blur(6px)}
-    section h2{margin:0 0 8px 0;font-size:16px}
-    .meta{color:var(--muted);font-size:13px}
+    
+    /* 标题优化 */
+    section h2{margin:0 0 8px 0;font-size:18px; color: #fff; border-bottom: 1px solid rgba(255,255,255,0.08); padding-bottom: 6px; font-weight: 600;} /* 一级标题更明显 */
+    section h3{margin:12px 0 6px 0;font-size:16px; color: var(--accent); font-weight: 500;} /* 二级标题 (如子模块标题) */
+
+    .meta{color:var(--muted);font-size:13px; margin-top: 4px; line-height: 1.6;}
     .list{margin:0;padding:0;list-style:none}
+    .list li{margin-bottom: 6px;} /* 列表项增加间距 */
     .skills{display:flex;flex-wrap:wrap;gap:8px}
     .tag{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:6px 10px;border-radius:999px;font-size:13px;color:var(--muted);border:1px solid rgba(255,255,255,0.03);transform:translateY(0);transition:transform .25s ease}
     .tag:hover{transform:translateY(-6px) scale(1.03)}
@@ -39,10 +44,10 @@
     .blob.b2{width:360px;height:360px;right:-100px;bottom:-80px;background:radial-gradient(circle at 70% 70%, #06b6d4, transparent 40%)}
     .reveal{opacity:0;transform:translateY(12px);transition:all .6s cubic-bezier(.2,.9,.2,1)}
     .reveal.show{opacity:1;transform:none}
-    .skill-row{display:flex;align-items:center;gap:12px;margin-bottom:10px}
-    .skill-name{width:120px;color:var(--muted);font-size:13px}
-    .skill-bar{flex:1;height:8px;background:rgba(255,255,255,0.03);border-radius:999px;overflow:hidden}
-    .skill-progress{height:100%;width:0%;border-radius:999px;background:linear-gradient(90deg,var(--accent),var(--accent2));transition:width 1s ease}
+    /* skill-row 样式已移除，因为该元素已被删除 */
+    /* skill-name 样式已移除，因为该元素已被删除 */
+    /* skill-bar 样式已移除，因为该元素已被删除 */
+    /* skill-progress 样式已移除，因为该元素已被删除 */
     /* portfolio */
     .portfolio-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:12px;margin-top:12px}
     .video-card{background:rgba(255,255,255,0.02);border-radius:10px;padding:8px;cursor:pointer;overflow:hidden;border:1px solid rgba(255,255,255,0.03);display:flex;flex-direction:column;gap:8px}
@@ -105,7 +110,7 @@
             <p class="meta" data-lang-zh>细心从每一个小细节开始。新媒体与影视方向的传播工作者，擅长短片拍摄、脚本策划、镜头调度与后期剪辑。具有企业宣传片制作与活动影像记录的完整流程经验，关注影像叙事与品牌表达的结合。</p>
             <p class="meta" data-lang-en style="display:none">Start with attention to every small detail. I am a communications professional focused on new media and film. Skilled in short film shooting, script planning, shot directing, and post-production. Experienced across the full production pipeline for corporate promos and event videos, with attention to narrative and brand expression.</p>
 
-            <h2 style="margin-top:12px"><span data-lang-zh>责任与技能亮点</span><span data-lang-en style="display:none">Responsibilities & Highlights</span></h2>
+            <h3><span data-lang-zh>责任与技能亮点</span><span data-lang-en style="display:none">Responsibilities & Highlights</span></h3>
             <ul class="list meta">
               <li data-lang-zh>统筹拍摄与制作流程：从前期策划、分镜脚本，到拍摄执行与后期合成。</li>
               <li data-lang-en style="display:none">Oversee production pipeline: from pre-production and storyboards to shooting and post-compositing.</li>
@@ -137,7 +142,7 @@
             <h2><span data-lang-zh>实习 / 工作经历</span><span data-lang-en style="display:none">Experience</span></h2>
             <div style="margin-top:8px">
               <div style="font-weight:600"><span data-lang-zh>中联重科 — 文化专干</span><span data-lang-en style="display:none">Zoomlion — Cultural Specialist</span></div>
-              <div class="meta">2023.12 — 至今</div>
+              <div class="meta">2023.12 — <span data-lang-zh>至今</span><span data-lang-en style="display:none">Present</span></div>
               <ul class="list meta">
                 <li data-lang-zh>主要负责企业文化宣传，包括但不限于宣传采访短片制作，企业新闻稿件撰写、企业工会活动组织策划执行等工作任务；</li>
                 <li data-lang-en style="display:none">Primarily responsible for corporate culture promotion, including but not limited to production of promotional interview shorts, writing corporate news articles, and organizing, planning, and executing corporate union activities;</li>
@@ -191,37 +196,31 @@
             <p class="meta" data-lang-zh>协作效率高,时间观念强。性格开朗,有极强的交往能力和处理人际关系的能力与较强的团队合作意识。对待工作任务态度认真,责任心强,具有良好的工作学习习惯,执行力强,能够有条理性的完成工作任务。</p>
             <p class="meta" data-lang-en style="display:none">High collaboration efficiency and strong time management skills. Outgoing personality, with excellent interpersonal and relationship management skills, and a strong sense of teamwork. Conscientious and highly responsible towards work tasks, with good work and study habits, strong execution, and the ability to complete tasks systematically.</p>
           </section>
+
+          <section style="margin-top:16px" id="skills">
+            <h2><span data-lang-zh>专业技能</span><span data-lang-en style="display:none">Skills</span></h2>
+            <div style="margin-top:10px" class="skills">
+              <span class="tag"><span data-lang-zh>大学英语四级/六级</span><span data-lang-en style="display:none">CET-4/6 Passed</span></span>
+              <span class="tag"><span data-lang-zh>普通话良好</span><span data-lang-en style="display:none">Good Mandarin</span></span>
+
+              <span class="tag"><span data-lang-zh>计算机二级（良好）</span><span data-lang-en style="display:none">Computer Rank Exam Level 2</span></span>
+              <span class="tag"><span data-lang-zh>熟练办公软件</span><span data-lang-en style="display:none">Proficient Office Software</span></span>
+              
+              <span class="tag">Premiere Pro</span>
+              <span class="tag">After Effects</span>
+              <span class="tag">Photoshop</span>
+              <span class="tag">Audition</span>
+              <span class="tag"><span data-lang-zh>剪映</span><span data-lang-en style="display:none">Jianying</span></span>
+              <span class="tag"><span data-lang-zh>脚本与文案</span><span data-lang-en style="display:none">Scripting & Copywriting</span></span>
+              <span class="tag"><span data-lang-zh>采访与剪辑</span><span data-lang-en style="display:none">Interviewing & Editing</span></span>
+              <span class="tag"><span data-lang-zh>视频剪辑</span><span data-lang-en style="display:none">Video Editing</span></span>
+              <span class="tag"><span data-lang-zh>后期合成</span><span data-lang-en style="display:none">Compositing</span></span>
+              <span class="tag"><span data-lang-zh>摄影与构图</span><span data-lang-en style="display:none">Cinematography</span></span>
+              <span class="tag"><span data-lang-zh>团队协作</span><span data-lang-en style="display:none">Teamwork</span></span>
+            </div>
+          </section>
         </div>
-
-        <div class="card reveal" style="margin-top:18px" id="skills">
-          <h2><span data-lang-zh>专业技能</span><span data-lang-en style="display:none">Skills</span></h2>
-          <div style="margin-top:10px" class="skills">
-            <span class="tag">Premiere Pro</span>
-            <span class="tag">After Effects</span>
-            <span class="tag">Photoshop</span>
-            <span class="tag">Audition</span>
-            <span class="tag">剪映</span>
-            <span class="tag">脚本与文案</span>
-            <span class="tag">采访与剪辑</span>
-            <span class="tag">团队协作</span>
-          </div>
-
-          <div style="margin-top:14px">
-            <div class="skill-row">
-              <div class="skill-name"><span data-lang-zh>视频剪辑</span><span data-lang-en style="display:none">Video Editing</span></div>
-              <div class="skill-bar"><div class="skill-progress" data-progress="90"></div></div>
-            </div>
-            <div class="skill-row">
-              <div class="skill-name"><span data-lang-zh>后期合成</span><span data-lang-en style="display:none">Compositing</span></div>
-              <div class="skill-bar"><div class="skill-progress" data-progress="80"></div></div>
-            </div>
-            <div class="skill-row">
-              <div class="skill-name"><span data-lang-zh>摄影与构图</span><span data-lang-en style="display:none">Cinematography</span></div>
-              <div class="skill-bar"><div class="skill-progress" data-progress="78"></div></div>
-            </div>
-          </div>
-        </div>
-
+        
         <div class="card reveal" style="margin-top:18px" id="portfolio">
           <h2><span data-lang-zh>作品展示</span><span data-lang-en style="display:none">Portfolio</span></h2>
 
@@ -289,6 +288,7 @@
       document.querySelectorAll('.video-card').forEach(card=>{
         const titleZh = card.getAttribute('data-title-zh') || '';
         const titleEn = card.getAttribute('data-title-en') || '';
+        // IMPORTANT: The element with data-title attribute must not be within data-lang-zh/en spans for this logic to work after language change
         card.setAttribute('data-title', (lang==='zh')? titleZh : titleEn);
 
         // toggle internal inline texts (for meta which uses span data-lang-zh/en)
@@ -305,8 +305,7 @@
     const io = new IntersectionObserver(entries=>{ entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('show'); } }); },{threshold:0.12});
     reveals.forEach(r=>io.observe(r));
 
-    // Skill bars
-    window.addEventListener('load', ()=>{ document.querySelectorAll('.skill-progress').forEach(el=>{ const v = el.getAttribute('data-progress') || 70; setTimeout(()=>{ el.style.width = v + '%'; }, 300); }); });
+    // Skill bars logic removed
 
     // Typewriter
     const words = ['短片制作', '脚本撰写', '后期剪辑', '企业宣传'];
@@ -317,9 +316,6 @@
 
     // Keyboard L to toggle language
     window.addEventListener('keydown', (e)=>{ if(e.key==='l' || e.key==='L'){ const next = (localStorage.getItem('pref-lang')==='zh')? 'en':'zh'; setLang(next); } });
-
-    // GitHub link edit (bilingual prompt)
-    document.getElementById('gh-link').addEventListener('click', (e)=>{ e.preventDefault(); const lang = localStorage.getItem('pref-lang') || 'zh'; const promptText = (lang==='zh')? '输入你的 GitHub 用户名（将用于显示和链接）' : 'Enter your GitHub username (for display and link)'; const u = prompt(promptText); if(u){ e.target.textContent = u; e.target.href = `https://github.com/${u}`; } });
 
     // Portfolio: modal video playback
     const modal = document.getElementById('modal'); const modalVideo = document.getElementById('modal-video'); const modalTitle = document.getElementById('modal-title'); const modalClose = document.getElementById('modal-close');
@@ -335,8 +331,6 @@
 
     // Accessibility: pause thumbnails when modal open
     // (thumbnails are muted looping videos by default)
-
-    // Hint: if you add many large video files, consider providing lower-resolution web-optimized files
   </script>
 </body>
 </html>
