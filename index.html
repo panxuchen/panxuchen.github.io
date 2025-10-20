@@ -20,7 +20,8 @@
     .btn.primary{background:linear-gradient(90deg,var(--accent),var(--accent2));color:#021226;border:0;box-shadow:0 6px 18px rgba(7,18,40,0.6);}
     .lang-toggle{display:flex;gap:8px}
     .hero{display:flex;gap:20px;align-items:center;margin-top:18px}
-    .avatar{width:120px;height:120px;border-radius:18px;background:linear-gradient(135deg,var(--accent),var(--accent2));display:flex;align-items:center;justify-content:center;font-weight:700;font-size:26px;color:#021226;flex-shrink:0;position:relative;overflow:hidden}
+    .avatar{width:120px;height:120px;border-radius:18px;overflow:hidden;flex-shrink:0;border:4px solid rgba(255,255,255,0.04);background:linear-gradient(135deg,var(--accent),var(--accent2));display:flex;align-items:center;justify-content:center}
+    .avatar img{width:100%;height:100%;object-fit:cover;display:block}
     .intro{flex:1}
     .name{font-size:30px;margin:0}
     .headline{margin:6px 0;color:var(--muted);font-size:15px}
@@ -63,12 +64,16 @@
   <div class="blob b2" aria-hidden="true"></div>
   <div class="wrap">
     <header>
-      <div style="display:flex;flex-direction:column">
-        <div style="display:flex;align-items:center;gap:10px">
-          <div style="font-weight:700;color:#fff"><span data-lang-zh>个人主页</span><span data-lang-en style="display:none">Personal</span></div>
-          <div style="color:var(--muted);font-size:13px"><span data-lang-zh>简介与作品展示</span><span data-lang-en style="display:none">Biography & Portfolio</span></div>
+      <div style="display:flex;align-items:center;gap:12px">
+        <div class="avatar">
+          <img src="./pxc.png" alt="个人证件照">
+        </div>
+        <div style="display:flex;flex-direction:column">
+          <div style="font-weight:700;font-size:18px;color:#fff"><span data-lang-zh>潘旭晨</span><span data-lang-en style="display:none">Xuchen Pan</span></div>
+          <div style="color:var(--muted);font-size:13px"><span data-lang-zh>新媒体传播 · 影视/视频制作</span><span data-lang-en style="display:none">New Media · Film & Video Production</span></div>
         </div>
       </div>
+
       <nav>
         <button class="btn" onclick="scrollToSection('about')"><span data-lang-zh>关于</span><span data-lang-en style="display:none">About</span></button>
         <button class="btn" onclick="scrollToSection('experience')"><span data-lang-zh>经历</span><span data-lang-en style="display:none">Experience</span></button>
@@ -82,7 +87,6 @@
     </header>
 
     <div class="hero">
-      <div class="avatar" aria-hidden="true">潘旭晨</div>
       <div class="intro">
         <h1 class="name"><span data-lang-zh>潘旭晨</span><span data-lang-en style="display:none">Xuchen Pan</span></h1>
         <div class="headline">
@@ -97,20 +101,35 @@
       <main>
         <div class="card reveal" id="about">
           <section>
-            <h2><span data-lang-zh>关于我</span><span data-lang-en style="display:none">About</span></h2>
-            <p class="meta" data-lang-zh>具备影视与新媒体方向的综合技能，擅长短片拍摄、脚本撰写、后期剪辑与企业宣传。熟练使用 PS/PR/AE/AU/剪映。善于沟通与团队协作。</p>
-            <p class="meta" data-lang-en style="display:none">Multidisciplinary skills in film and new media — shooting, scriptwriting, video editing, and corporate promotion. Proficient with PS/PR/AE/AU/Jianying. Strong communication and teamwork.</p>
+            <h2><span data-lang-zh>个人简介</span><span data-lang-en style="display:none">Profile</span></h2>
+            <p class="meta" data-lang-zh>新媒体与影视方向的传播工作者，擅长短片拍摄、脚本策划、镜头调度与后期剪辑。具有企业宣传片制作与活动影像记录的完整流程经验，关注影像叙事与品牌表达的结合。</p>
+            <p class="meta" data-lang-en style="display:none">I am a communications professional focused on new media and film. Skilled in short film shooting, script planning, shot directing, and post-production. Experienced across the full production pipeline for corporate promos and event videos, with attention to narrative and brand expression.</p>
+
+            <h2 style="margin-top:12px"><span data-lang-zh>责任与技能亮点</span><span data-lang-en style="display:none">Responsibilities & Highlights</span></h2>
+            <ul class="list meta">
+              <li data-lang-zh>统筹拍摄与制作流程：从前期策划、分镜脚本，到拍摄执行与后期合成。</li>
+              <li data-lang-en style="display:none">Oversee production pipeline: from pre-production and storyboards to shooting and post-compositing.</li>
+              <li data-lang-zh>专业软件：Adobe Premiere、After Effects、Photoshop、Audition、剪映。</li>
+              <li data-lang-en style="display:none">Tools: Adobe Premiere, After Effects, Photoshop, Audition, Jianying.</li>
+              <li data-lang-zh>具备采访与文稿撰写能力，可承担人物/企业宣讲类短视频策划与采访拍摄。</li>
+              <li data-lang-en style="display:none">Experienced in interview production and copywriting for person/brand-focused short videos.</li>
+            </ul>
           </section>
 
           <section style="margin-top:16px" id="education">
-            <h2><span data-lang-zh>教育背景</span><span data-lang-en style="display:none">Education</span></h2>
+            <h2><span data-lang-zh>教育经历</span><span data-lang-en style="display:none">Education</span></h2>
             <div class="meta" style="margin-top:8px">
               <strong><span data-lang-zh>香港浸会大学 — 新媒体传播学（硕士）</span><span data-lang-en style="display:none">Hong Kong Baptist University — M.A. in New Media</span></strong>
               <div class="meta">2022.09 — 2023.09</div>
+              <div class="meta" style="margin-top:6px" data-lang-zh>代表课程：独立电影制片、互动媒体、媒体艺术、影视市场与发行、视觉文化研究。</div>
+              <div class="meta" style="margin-top:6px;display:none" data-lang-en>Representative courses: Independent Film Production, Interactive Media, Media Arts, Film Marketing & Distribution, Visual Culture Studies.</div>
             </div>
+
             <div class="meta" style="margin-top:12px">
-              <strong><span data-lang-zh>南京传媒学院 — 戏剧影视设计（本科）</span><span data-lang-en style="display:none">Nanjing University of the Arts — B.A. in Theatrical & Film Design</span></strong>
+              <strong><span data-lang-zh>南京传媒学院 — 戏剧影视设计（本科）</span><span data-lang-en style="display:none">Nanjing Communication University — B.A. in Theatrical & Film Design</span></strong>
               <div class="meta">2018.09 — 2022.06 · GPA: 3.72 · <span data-lang-zh>专业排名：2</span><span data-lang-en style="display:none">Class rank: 2</span></div>
+              <div class="meta" style="margin-top:6px" data-lang-zh>本科期间侧重摄影艺术、视听语言与设计基础，参与多次校内影像创作与展映。</div>
+              <div class="meta" style="margin-top:6px;display:none" data-lang-en>Undergraduate focus: photography, audiovisual language and design fundamentals. Participated in multiple campus film projects and screenings.</div>
             </div>
           </section>
 
@@ -120,8 +139,12 @@
               <div style="font-weight:600"><span data-lang-zh>中联重科 — 文化专干</span><span data-lang-en style="display:none">Zoomlion — Cultural Specialist</span></div>
               <div class="meta">2023.12 — 至今</div>
               <ul class="list meta">
-                <li data-lang-zh>负责企业文化宣传：宣传短片制作、稿件撰写、工会活动策划与执行。</li>
-                <li data-lang-en style="display:none">Responsible for corporate culture promotion: producing short promotional films, copywriting, and organizing union activities.</li>
+                <li data-lang-zh>负责企业文化宣传片的策划与制作，完成多部采访视频与企业内宣短片；</li>
+                <li data-lang-en style="display:none">Responsible for planning and producing corporate culture videos, completing multiple interview pieces and internal promotional shorts;</li>
+                <li data-lang-zh>撰写新闻稿与活动文案，参与工会及企业活动的拍摄与传播方案制定；</li>
+                <li data-lang-en style="display:none">Wrote press releases and event copy, participated in shooting and communication planning for union and corporate events;</li>
+                <li data-lang-zh>协同外包团队进行拍摄执行与后期制作，确保品牌调性一致性。</li>
+                <li data-lang-en style="display:none">Coordinated with external teams for shooting and post-production, ensuring consistent brand tone.</li>
               </ul>
             </div>
 
@@ -129,11 +152,23 @@
               <div style="font-weight:600"><span data-lang-zh>河南广播电视台 — 栏目制作实习生</span><span data-lang-en style="display:none">Henan Radio & TV — Program Production Intern</span></div>
               <div class="meta">2021.11 — 2022.02</div>
               <ul class="list meta">
-                <li data-lang-zh>参与前期方案、脚本文案、海报设计与后期剪辑包装。</li>
-                <li data-lang-en style="display:none">Involved in pre-production planning, scriptwriting, poster design and post-production editing.</li>
+                <li data-lang-zh>参与栏目选题、前期策划、脚本撰写与拍摄执行；</li>
+                <li data-lang-en style="display:none">Participated in topic selection, pre-production planning, scriptwriting and shooting execution;</li>
+                <li data-lang-zh>负责节目录制现场组织与后期素材整理、剪辑包装。</li>
+                <li data-lang-en style="display:none">Managed on-site recording and post-production material organization, editing and packaging.</li>
               </ul>
             </div>
 
+            <div style="margin-top:10px">
+              <div style="font-weight:600"><span data-lang-zh>学生会宣传制作中心 — 干事 / 部长</span><span data-lang-en style="display:none">Student Union — Media Team / Head</span></div>
+              <div class="meta">2018 — 2020</div>
+              <ul class="list meta">
+                <li data-lang-zh>组织校园活动宣传、带领团队完成海报与活动视频制作，提升项目执行能力；</li>
+                <li data-lang-en style="display:none">Organized campus event promotions, led the team to produce posters and event videos, improving project execution skills;</li>
+                <li data-lang-zh>参与“迎新晚会”“暖冬计划”等大型活动的影像记录与后期剪辑。</li>
+                <li data-lang-en style="display:none">Participated in filming and post-editing for major events such as Freshers' Night and Winter Aid.</li>
+              </ul>
+            </div>
           </section>
 
           <section style="margin-top:16px" id="honors">
@@ -144,33 +179,47 @@
               <li><span data-lang-zh>2022.06 优秀毕业生</span><span data-lang-en style="display:none">2022.06 Outstanding Graduate</span></li>
             </ul>
           </section>
+
+          <section style="margin-top:16px" id="projects">
+            <h2><span data-lang-zh>代表项目</span><span data-lang-en style="display:none">Selected Projects</span></h2>
+            <ul class="list meta">
+              <li><strong><span data-lang-zh>企业文化系列短片（中联重科）</span><span data-lang-en style="display:none">Corporate Culture Short Series (Zoomlion)</span></strong> — <span data-lang-zh>负责策划、采访与剪辑，完成三集企业内宣短片，推动内部传播。</span><span data-lang-en style="display:none">Responsible for planning, interviewing and editing — produced a three-episode internal promotional series.</span></li>
+              <li style="margin-top:6px"><strong><span data-lang-zh>校园纪录短片集</span><span data-lang-en style="display:none">Campus Documentary Series</span></strong> — <span data-lang-zh>作为导演与剪辑负责影像风格设计与后期合成，参与多次校内展映。</span><span data-lang-en style="display:none">Served as director and editor, responsible for visual style and post-compositing; screened on campus events.</span></li>
+            </ul>
+          </section>
+
+          <section style="margin-top:16px" id="summary">
+            <h2><span data-lang-zh>自我评价</span><span data-lang-en style="display:none">Summary</span></h2>
+            <p class="meta" data-lang-zh>具备良好的沟通与组织能力，注重影像表达与受众体验的结合。在高压项目中能保持条理性，善于跨团队协作并推动项目落地。</p>
+            <p class="meta" data-lang-en style="display:none">Strong communication and organizational skills, emphasizing the fusion of visual storytelling and audience experience. Maintains clarity under pressure and excels at cross-team collaboration to deliver projects.</p>
+          </section>
         </div>
 
         <div class="card reveal" style="margin-top:18px" id="skills">
           <h2><span data-lang-zh>专业技能</span><span data-lang-en style="display:none">Skills</span></h2>
           <div style="margin-top:10px" class="skills">
-            <span class="tag">PR</span>
-            <span class="tag">AE</span>
-            <span class="tag">PS</span>
-            <span class="tag">AU</span>
+            <span class="tag">Premiere Pro</span>
+            <span class="tag">After Effects</span>
+            <span class="tag">Photoshop</span>
+            <span class="tag">Audition</span>
             <span class="tag">剪映</span>
-            <span class="tag">Office</span>
-            <span class="tag">普通话</span>
-            <span class="tag">英语（CET-4/6）</span>
+            <span class="tag">脚本与文案</span>
+            <span class="tag">采访与剪辑</span>
+            <span class="tag">团队协作</span>
           </div>
 
           <div style="margin-top:14px">
             <div class="skill-row">
               <div class="skill-name"><span data-lang-zh>视频剪辑</span><span data-lang-en style="display:none">Video Editing</span></div>
-              <div class="skill-bar"><div class="skill-progress" data-progress="85"></div></div>
+              <div class="skill-bar"><div class="skill-progress" data-progress="90"></div></div>
             </div>
             <div class="skill-row">
               <div class="skill-name"><span data-lang-zh>后期合成</span><span data-lang-en style="display:none">Compositing</span></div>
-              <div class="skill-bar"><div class="skill-progress" data-progress="78"></div></div>
+              <div class="skill-bar"><div class="skill-progress" data-progress="80"></div></div>
             </div>
             <div class="skill-row">
-              <div class="skill-name"><span data-lang-zh>平面设计</span><span data-lang-en style="display:none">Graphic Design</span></div>
-              <div class="skill-bar"><div class="skill-progress" data-progress="75"></div></div>
+              <div class="skill-name"><span data-lang-zh>摄影与构图</span><span data-lang-en style="display:none">Cinematography</span></div>
+              <div class="skill-bar"><div class="skill-progress" data-progress="78"></div></div>
             </div>
           </div>
         </div>
@@ -181,19 +230,19 @@
 
           <div class="portfolio-grid" id="portfolio-grid">
             <!-- 示例项目：把 video1.mp4 替换为你的文件名 -->
-            <div class="video-card" data-src="./video1.mp4" data-title-zh="企业宣传短片A" data-title-en="Corporate Promo A" tabindex="0">
-              <video class="video-thumb" muted playsinline loop preload="metadata" src="./video1.mp4"></video>
+            <div class="video-card" data-src="./video1.mp4" data-title-zh="剪辑作品A" data-title-en="Event Edit A" tabindex="0">
+              <video class="video-thumb" muted playsinline loop preload="metadata" src="./video1.mp4" poster="./thumb1.jpg" controls></video>
               <div>
-                <div class="video-title"><span data-lang-zh>企业宣传短片A</span><span data-lang-en style="display:none">Corporate Promo A</span></div>
-                <div class="video-meta"><span data-lang-zh>时长：00:45 · 2024</span><span data-lang-en style="display:none">Duration: 00:45 · 2024</span></div>
+                <div class="video-title"><span data-lang-zh>剪辑作品A</span><span data-lang-en style="display:none">Event Edit A</span></div>
+                <div class="video-meta"><span data-lang-zh>时长：00:59 · 2025</span><span data-lang-en style="display:none">Duration: 00:59 · 2025</span></div>
               </div>
             </div>
 
-            <div class="video-card" data-src="./video2.mp4" data-title-zh="活动剪辑B" data-title-en="Event Edit B" tabindex="0">
-              <video class="video-thumb" muted playsinline loop preload="metadata" src="./video2.mp4"></video>
+            <div class="video-card" data-src="./video2.mp4" data-title-zh="剪辑作品B" data-title-en="Event Edit B" tabindex="0">
+              <video class="video-thumb" muted playsinline loop preload="metadata" src="./video2.mp4" poster="./thumb2.jpg" controls></video>
               <div>
-                <div class="video-title"><span data-lang-zh>活动剪辑B</span><span data-lang-en style="display:none">Event Edit B</span></div>
-                <div class="video-meta"><span data-lang-zh>时长：01:20 · 2023</span><span data-lang-en style="display:none">Duration: 01:20 · 2023</span></div>
+                <div class="video-title"><span data-lang-zh>剪辑作品B</span><span data-lang-en style="display:none">Event Edit B</span></div>
+                <div class="video-meta"><span data-lang-zh>时长：02:05 · 2025</span><span data-lang-en style="display:none">Duration: 02:05 · 2025</span></div>
               </div>
             </div>
 
@@ -209,7 +258,6 @@
           <div style="margin-top:8px;color:var(--muted)">
             <div><span class="meta"><span data-lang-zh>电话：</span><span data-lang-en style="display:none">Phone:</span></span>19839727710</div>
             <div style="margin-top:6px"><span class="meta"><span data-lang-zh>邮箱：</span><span data-lang-en style="display:none">Email:</span></span><a href="mailto:panpanxuchen@163.com">panpanxuchen@163.com</a></div>
-            <div style="margin-top:6px"><span class="meta"><span data-lang-zh>Github：</span><span data-lang-en style="display:none">Github:</span></span><a href="#" id="gh-link"><span data-lang-zh>填写你的 GitHub 用户名</span><span data-lang-en style="display:none">Add your GitHub username</span></a></div>
           </div>
 
           <div style="margin-top:12px">
@@ -248,6 +296,10 @@
         const titleZh = card.getAttribute('data-title-zh') || '';
         const titleEn = card.getAttribute('data-title-en') || '';
         card.setAttribute('data-title', (lang==='zh')? titleZh : titleEn);
+
+        // toggle internal inline texts (for meta which uses span data-lang-zh/en)
+        card.querySelectorAll('[data-lang-zh]').forEach(el=>el.style.display = (lang==='zh')? '' : 'none');
+        card.querySelectorAll('[data-lang-en]').forEach(el=>el.style.display = (lang==='en')? '' : 'none');
       });
     }
     (function(){ const pref = localStorage.getItem('pref-lang') || (navigator.language && navigator.language.startsWith('en')? 'en' : 'zh'); setLang(pref); })();
