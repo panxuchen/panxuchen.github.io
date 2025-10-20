@@ -9,7 +9,7 @@
   <style>
     /* 使用微软雅黑作为首选字体 */
     @font-face{font-family: 'Microsoft YaHei';}
-    :root{--bg1:#021026; --bg2:#071428; --card:#071927; --muted:#9aa6b2; --accent:#06b6d4; --accent2:#7c3aed; --glass: rgba(255,255,255,0.03);}
+    :root{--bg1:#021026; --bg2:#071428; --card:#071927; --muted:#9aa6b2; --accent:#06b6d4; --accent2:#7c3aed; --glass: rgba(255,255,255,0.03);}    
     *{box-sizing:border-box}
     html,body{height:100%;margin:0;font-family:"Microsoft YaHei", "微软雅黑", Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; -webkit-font-smoothing:antialiased}
     body{background: radial-gradient(800px 400px at 10% 10%, rgba(99,102,241,0.12), transparent), radial-gradient(700px 350px at 90% 90%, rgba(6,182,212,0.08), transparent), linear-gradient(180deg,var(--bg1),var(--bg2)); color:#e6eef3; padding:28px; overflow-y:auto}
@@ -65,16 +65,15 @@
     <header>
       <div style="display:flex;flex-direction:column">
         <div style="display:flex;align-items:center;gap:10px">
-          <div style="font-weight:700;color:#fff">个人主页</div>
-          <div style="color:var(--muted);font-size:13px">由简历自动生成 · 可编辑</div>
+          <div style="font-weight:700;color:#fff"><span data-lang-zh>个人主页</span><span data-lang-en style="display:none">Personal</span></div>
+          <div style="color:var(--muted);font-size:13px"><span data-lang-zh>简介与作品展示</span><span data-lang-en style="display:none">Biography & Portfolio</span></div>
         </div>
-        <div style="margin-top:6px;color:var(--muted);font-size:13px">部署到 GitHub Pages 即可在线访问</div>
       </div>
       <nav>
-        <button class="btn" onclick="scrollToSection('about')">关于</button>
-        <button class="btn" onclick="scrollToSection('experience')">经历</button>
-        <button class="btn" onclick="scrollToSection('skills')">技能</button>
-        <button class="btn" onclick="scrollToSection('portfolio')">作品</button>
+        <button class="btn" onclick="scrollToSection('about')"><span data-lang-zh>关于</span><span data-lang-en style="display:none">About</span></button>
+        <button class="btn" onclick="scrollToSection('experience')"><span data-lang-zh>经历</span><span data-lang-en style="display:none">Experience</span></button>
+        <button class="btn" onclick="scrollToSection('skills')"><span data-lang-zh>技能</span><span data-lang-en style="display:none">Skills</span></button>
+        <button class="btn" onclick="scrollToSection('portfolio')"><span data-lang-zh>作品</span><span data-lang-en style="display:none">Portfolio</span></button>
         <div class="lang-toggle">
           <button id="zh-btn" class="btn primary" onclick="setLang('zh')">中文</button>
           <button id="en-btn" class="btn" onclick="setLang('en')">English</button>
@@ -106,19 +105,19 @@
           <section style="margin-top:16px" id="education">
             <h2><span data-lang-zh>教育背景</span><span data-lang-en style="display:none">Education</span></h2>
             <div class="meta" style="margin-top:8px">
-              <strong>香港浸会大学 — 新媒体传播学（硕士）</strong>
+              <strong><span data-lang-zh>香港浸会大学 — 新媒体传播学（硕士）</span><span data-lang-en style="display:none">Hong Kong Baptist University — M.A. in New Media</span></strong>
               <div class="meta">2022.09 — 2023.09</div>
             </div>
             <div class="meta" style="margin-top:12px">
-              <strong>南京传媒学院 — 戏剧影视设计（本科）</strong>
-              <div class="meta">2018.09 — 2022.06 · GPA: 3.72 · 专业排名：2</div>
+              <strong><span data-lang-zh>南京传媒学院 — 戏剧影视设计（本科）</span><span data-lang-en style="display:none">Nanjing University of the Arts — B.A. in Theatrical & Film Design</span></strong>
+              <div class="meta">2018.09 — 2022.06 · GPA: 3.72 · <span data-lang-zh>专业排名：2</span><span data-lang-en style="display:none">Class rank: 2</span></div>
             </div>
           </section>
 
           <section style="margin-top:16px" id="experience">
             <h2><span data-lang-zh>实习 / 工作经历</span><span data-lang-en style="display:none">Experience</span></h2>
             <div style="margin-top:8px">
-              <div style="font-weight:600">中联重科 — 文化专干</div>
+              <div style="font-weight:600"><span data-lang-zh>中联重科 — 文化专干</span><span data-lang-en style="display:none">Zoomlion — Cultural Specialist</span></div>
               <div class="meta">2023.12 — 至今</div>
               <ul class="list meta">
                 <li data-lang-zh>负责企业文化宣传：宣传短片制作、稿件撰写、工会活动策划与执行。</li>
@@ -127,8 +126,12 @@
             </div>
 
             <div style="margin-top:10px">
-              <div style="font-weight:600">河南广播电视台 — 栏目制作实习生</div>
+              <div style="font-weight:600"><span data-lang-zh>河南广播电视台 — 栏目制作实习生</span><span data-lang-en style="display:none">Henan Radio & TV — Program Production Intern</span></div>
               <div class="meta">2021.11 — 2022.02</div>
+              <ul class="list meta">
+                <li data-lang-zh>参与前期方案、脚本文案、海报设计与后期剪辑包装。</li>
+                <li data-lang-en style="display:none">Involved in pre-production planning, scriptwriting, poster design and post-production editing.</li>
+              </ul>
             </div>
 
           </section>
@@ -136,9 +139,9 @@
           <section style="margin-top:16px" id="honors">
             <h2><span data-lang-zh>奖项与荣誉</span><span data-lang-en style="display:none">Honors</span></h2>
             <ul class="list meta" style="margin-top:8px">
-              <li>2019.09 奖学金、三好学生</li>
-              <li>2020.09 学生会优秀成员</li>
-              <li>2022.06 优秀毕业生</li>
+              <li><span data-lang-zh>2019.09 奖学金、三好学生</span><span data-lang-en style="display:none">2019.09 Scholarship, Excellent Student</span></li>
+              <li><span data-lang-zh>2020.09 学生会优秀成员</span><span data-lang-en style="display:none">2020.09 Outstanding Student Union Member</span></li>
+              <li><span data-lang-zh>2022.06 优秀毕业生</span><span data-lang-en style="display:none">2022.06 Outstanding Graduate</span></li>
             </ul>
           </section>
         </div>
@@ -158,15 +161,15 @@
 
           <div style="margin-top:14px">
             <div class="skill-row">
-              <div class="skill-name">视频剪辑</div>
+              <div class="skill-name"><span data-lang-zh>视频剪辑</span><span data-lang-en style="display:none">Video Editing</span></div>
               <div class="skill-bar"><div class="skill-progress" data-progress="85"></div></div>
             </div>
             <div class="skill-row">
-              <div class="skill-name">后期合成</div>
+              <div class="skill-name"><span data-lang-zh>后期合成</span><span data-lang-en style="display:none">Compositing</span></div>
               <div class="skill-bar"><div class="skill-progress" data-progress="78"></div></div>
             </div>
             <div class="skill-row">
-              <div class="skill-name">平面设计</div>
+              <div class="skill-name"><span data-lang-zh>平面设计</span><span data-lang-en style="display:none">Graphic Design</span></div>
               <div class="skill-bar"><div class="skill-progress" data-progress="75"></div></div>
             </div>
           </div>
@@ -175,23 +178,22 @@
         <!-- Portfolio -->
         <div class="card reveal" style="margin-top:18px" id="portfolio">
           <h2><span data-lang-zh>作品展示</span><span data-lang-en style="display:none">Portfolio</span></h2>
-          <p class="meta" style="margin-top:8px">将视频文件放在仓库根目录，然后在下面的条目中填写文件名（示例已给出）。</p>
 
           <div class="portfolio-grid" id="portfolio-grid">
             <!-- 示例项目：把 video1.mp4 替换为你的文件名 -->
-            <div class="video-card" data-src="./video1.mp4" data-title="企业宣传短片A" tabindex="0">
+            <div class="video-card" data-src="./video1.mp4" data-title-zh="企业宣传短片A" data-title-en="Corporate Promo A" tabindex="0">
               <video class="video-thumb" muted playsinline loop preload="metadata" src="./video1.mp4"></video>
               <div>
-                <div class="video-title">企业宣传短片A</div>
-                <div class="video-meta">时长：00:45 · 2024</div>
+                <div class="video-title"><span data-lang-zh>企业宣传短片A</span><span data-lang-en style="display:none">Corporate Promo A</span></div>
+                <div class="video-meta"><span data-lang-zh>时长：00:45 · 2024</span><span data-lang-en style="display:none">Duration: 00:45 · 2024</span></div>
               </div>
             </div>
 
-            <div class="video-card" data-src="./video2.mp4" data-title="活动剪辑B" tabindex="0">
+            <div class="video-card" data-src="./video2.mp4" data-title-zh="活动剪辑B" data-title-en="Event Edit B" tabindex="0">
               <video class="video-thumb" muted playsinline loop preload="metadata" src="./video2.mp4"></video>
               <div>
-                <div class="video-title">活动剪辑B</div>
-                <div class="video-meta">时长：01:20 · 2023</div>
+                <div class="video-title"><span data-lang-zh>活动剪辑B</span><span data-lang-en style="display:none">Event Edit B</span></div>
+                <div class="video-meta"><span data-lang-zh>时长：01:20 · 2023</span><span data-lang-en style="display:none">Duration: 01:20 · 2023</span></div>
               </div>
             </div>
 
@@ -205,22 +207,21 @@
         <div class="card reveal" style="position:sticky;top:28px">
           <h2><span data-lang-zh>联系方式</span><span data-lang-en style="display:none">Contact</span></h2>
           <div style="margin-top:8px;color:var(--muted)">
-            <div><span class="meta">电话：</span>19839727710</div>
-            <div style="margin-top:6px"><span class="meta">邮箱：</span><a href="mailto:panpanxuchen@163.com">panpanxuchen@163.com</a></div>
-            <div style="margin-top:6px"><span class="meta">Github：</span><a href="#" id="gh-link">(填写你的 GitHub 用户名)</a></div>
+            <div><span class="meta"><span data-lang-zh>电话：</span><span data-lang-en style="display:none">Phone:</span></span>19839727710</div>
+            <div style="margin-top:6px"><span class="meta"><span data-lang-zh>邮箱：</span><span data-lang-en style="display:none">Email:</span></span><a href="mailto:panpanxuchen@163.com">panpanxuchen@163.com</a></div>
+            <div style="margin-top:6px"><span class="meta"><span data-lang-zh>Github：</span><span data-lang-en style="display:none">Github:</span></span><a href="#" id="gh-link"><span data-lang-zh>填写你的 GitHub 用户名</span><span data-lang-en style="display:none">Add your GitHub username</span></a></div>
           </div>
 
           <div style="margin-top:12px">
             <h2><span data-lang-zh>下载简历</span><span data-lang-en style="display:none">Resume</span></h2>
-            <p class="meta">把 <code>简历.pdf</code> 放到仓库根目录，页面将会链接到该文件。</p>
-            <p style="margin-top:8px"><a class="btn primary" href="./简历.pdf" download>下载简历 (PDF)</a></p>
+            <p class="meta" style="margin-top:6px"><a class="btn primary" href="./简历.pdf" download><span data-lang-zh>下载简历 (PDF)</span><span data-lang-en style="display:none">Download Resume (PDF)</span></a></p>
           </div>
         </div>
       </aside>
     </div>
 
     <footer>
-      <div class="meta">页面由 ChatGPT 帮助生成 • 如需主题/文字自定义可直接编辑 <code>index.html</code></div>
+      <div class="meta"><span data-lang-zh>版权所有 © 2025 潘旭晨</span><span data-lang-en style="display:none">© 2025 Xuchen Pan. All rights reserved.</span></div>
     </footer>
   </div>
 
@@ -241,6 +242,13 @@
       document.getElementById('zh-btn').classList.toggle('primary', lang==='zh');
       document.getElementById('en-btn').classList.toggle('primary', lang==='en');
       localStorage.setItem('pref-lang', lang);
+
+      // update modal titles from data attributes
+      document.querySelectorAll('.video-card').forEach(card=>{
+        const titleZh = card.getAttribute('data-title-zh') || '';
+        const titleEn = card.getAttribute('data-title-en') || '';
+        card.setAttribute('data-title', (lang==='zh')? titleZh : titleEn);
+      });
     }
     (function(){ const pref = localStorage.getItem('pref-lang') || (navigator.language && navigator.language.startsWith('en')? 'en' : 'zh'); setLang(pref); })();
 
@@ -264,8 +272,8 @@
     // Keyboard L to toggle language
     window.addEventListener('keydown', (e)=>{ if(e.key==='l' || e.key==='L'){ const next = (localStorage.getItem('pref-lang')==='zh')? 'en':'zh'; setLang(next); } });
 
-    // GitHub link edit
-    document.getElementById('gh-link').addEventListener('click', (e)=>{ e.preventDefault(); const u = prompt('输入你的 GitHub 用户名（将用于显示和链接）'); if(u){ e.target.textContent = u; e.target.href = `https://github.com/${u}`; } });
+    // GitHub link edit (bilingual prompt)
+    document.getElementById('gh-link').addEventListener('click', (e)=>{ e.preventDefault(); const lang = localStorage.getItem('pref-lang') || 'zh'; const promptText = (lang==='zh')? '输入你的 GitHub 用户名（将用于显示和链接）' : 'Enter your GitHub username (for display and link)'; const u = prompt(promptText); if(u){ e.target.textContent = u; e.target.href = `https://github.com/${u}`; } });
 
     // Portfolio: modal video playback
     const modal = document.getElementById('modal'); const modalVideo = document.getElementById('modal-video'); const modalTitle = document.getElementById('modal-title'); const modalClose = document.getElementById('modal-close');
@@ -275,7 +283,7 @@
 
     // Attach click handlers for each video card
     document.querySelectorAll('.video-card').forEach(card=>{
-      card.addEventListener('click', ()=>{ const src = card.getAttribute('data-src'); const title = card.getAttribute('data-title') || ''; openModal(src,title); });
+      card.addEventListener('click', ()=>{ const src = card.getAttribute('data-src'); const title = card.getAttribute('data-title') || card.getAttribute('data-title-zh') || card.getAttribute('data-title-en') || ''; openModal(src,title); });
       card.addEventListener('keypress', (e)=>{ if(e.key==='Enter') card.click(); });
     });
 
